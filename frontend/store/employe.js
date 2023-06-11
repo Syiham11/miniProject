@@ -54,14 +54,6 @@ export const actions = {
           })
       })
   },
-  getDataCount({ commit }, payload) {
-    return new Promise((resolve, reject) => {
-        this.$axios.get(`/count-all`).then((response) => {
-            commit('SET_DATATOTAL', response.data.data)
-            resolve()
-        })
-    })
-},
   updateEmployeData({ dispatch, commit }, payload) {
       return new Promise((resolve, reject) => {
           this.$axios.put(`/employe/${payload.id}`, payload)
