@@ -10,8 +10,6 @@
               </div>
             </div>
 
-
-
             <div class="row">
               <div class="col-12 col-xl-12 stretch-card">
                 <div class="row flex-grow">
@@ -90,7 +88,6 @@ export default {
 
     created() {
          this.getEmployesData()
-         this.getDataCount()
     },
     data() {
         return {
@@ -115,7 +112,7 @@ export default {
         }
     },
     methods: {
-        ...mapActions('employe', ['getEmployesData', 'destroyEmployesData','getDataCount']),
+        ...mapActions('employe', ['getEmployesData', 'destroyEmployesData']),
         ...mapMutations('employe', ['SET_PAGE']),
         openDeleteModal(row) {
             this.employe_selected = row.item
