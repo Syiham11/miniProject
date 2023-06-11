@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.28, for macos11 (x86_64)
 --
--- Host: 127.0.0.1    Database: backend
+-- Host: 127.0.0.1    Database: test_v2
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -25,16 +25,13 @@ DROP TABLE IF EXISTS `employes`;
 CREATE TABLE `employes` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `company` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `department` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nik` int NOT NULL,
-  `join_date` date NOT NULL,
   `date_of_birth` date NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gender` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +40,7 @@ CREATE TABLE `employes` (
 
 LOCK TABLES `employes` WRITE;
 /*!40000 ALTER TABLE `employes` DISABLE KEYS */;
-INSERT INTO `employes` VALUES (1,'budi','PT.BCA','ITC',9809809,'2022-02-02','2021-02-02','active','2023-01-19 06:49:59','2023-01-19 06:49:59'),(3,'Tono','PT.BCA','ITC',9809809,'2022-02-02','2021-02-02','active','2023-01-19 15:00:49','2023-01-19 15:00:49'),(4,'alexa','PT BCA','ICT',987897,'2023-01-20','2023-01-31','active','2023-01-19 15:28:11','2023-01-19 15:59:16');
+INSERT INTO `employes` VALUES (1,'Rudi','ITC','2021-02-02','Laki-Laki','2023-06-11 03:48:41','2023-06-11 03:49:55'),(3,'hasan','ITC','2021-02-02','Laki-Laki','2023-06-11 03:49:09','2023-06-11 03:49:09');
 /*!40000 ALTER TABLE `employes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,4 +110,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-20  8:10:49
+-- Dump completed on 2023-06-11 10:53:40

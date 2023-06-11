@@ -10,15 +10,6 @@
                     <p class="text-danger" v-if="errors.name">{{ errors.name[0] }}</p>
                   </div>
                   <div class="form-group">
-										<label for="exampleInputText1">Company</label>
-                    <select class="form-control" v-model="employes.company" >
-                        <option value="">Pilih</option>
-                        <option value="PT BCA">PT BCA</option>
-                        <option value="PT ABC">PT ABC</option>
-                    </select>
-                    <p class="text-danger" v-if="errors.company">{{ errors.company[0] }}</p>
-                  </div>
-                  <div class="form-group">
 										<label for="exampleInputText1">Department</label>
                     <select class="form-control" v-model="employes.department" >
                         <option value="">Pilih</option>
@@ -28,28 +19,18 @@
                     <p class="text-danger" v-if="errors.department">{{ errors.department[0] }}</p>
 									</div>
                   <div class="form-group">
-										<label for="exampleInputText1">Nik</label>
-										<input type="number" v-model="employes.nik" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
-                    <p class="text-danger" v-if="errors.nik">{{ errors.nik[0] }}</p>
-                  </div>
-                  <div class="form-group">
-										<label for="exampleInputText1">Join Date</label>
-										<input type="date" v-model="employes.join_date" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
-                    <p class="text-danger" v-if="errors.join_date">{{ errors.join_date[0] }}</p>
-                  </div>
-                  <div class="form-group">
 										<label for="exampleInputText1">Date Of Birth</label>
 										<input type="date" v-model="employes.date_of_birth" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
                     <p class="text-danger" v-if="errors.date_of_birth">{{ errors.date_of_birth[0] }}</p>
                   </div>
                   <div class="form-group">
-										<label for="exampleInputText1">Status</label>
-                    <select class="form-control" v-model="employes.status" >
+										<label for="exampleInputText1">Gender</label>
+                    <select class="form-control" v-model="employes.gender" >
                         <option value="">Pilih</option>
-                        <option value="active">Active</option>
-                        <option value="inactive">Inactive</option>
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
                     </select>
-                    <p class="text-danger" v-if="errors.status">{{ errors.status[0] }}</p>
+                    <p class="text-danger" v-if="errors.gender">{{ errors.gender[0] }}</p>
 									</div>
 									<button class="btn btn-primary" type="button" @click="submit">Save</button>
 								</form>
@@ -65,12 +46,9 @@ export default {
         if (this.$route.name == 'employes-edit-id') {
             this.employes = {
                 name: this.employe.name,
-                company: this.employe.company,
                 department: this.employe.department,
-                nik: String(this.employe.nik),
-                join_date: this.employe.join_date,
                 date_of_birth: this.employe.date_of_birth,
-                status: this.employe.status,
+                gender: this.employe.gender,
             }
         }
     },
@@ -78,12 +56,9 @@ export default {
         return {
           employes: {
                 name: '',
-                company: '',
                 department: '',
-                nik:'',
-                join_date: '',
                 date_of_birth: '',
-                status:'',
+                gender:'',
           },
         }
     },

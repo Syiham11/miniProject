@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "25fc4969-d0e7-4d7d-ab06-07606755af54",
-		"name": "miniProject",
+		"_postman_id": "b122446a-985b-417e-957f-60892d706d06",
+		"name": "laravel-BE",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "7955302"
 	},
@@ -94,7 +94,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"Tono\",\n    \"company\":\"PT.BCA\",\n    \"department\":\"ITC\",\n    \"nik\":\"9809809\",\n    \"join_date\":\"2022-02-02\",\n    \"date_of_birth\":\"2021-02-02\",\n    \"status\":\"active\"\n}",
+					"raw": "{\n    \"name\":\"hasan\",\n    \"department\":\"ITC\",\n    \"date_of_birth\":\"2021-02-02\",\n    \"gender\":\"Laki-Laki\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -126,7 +126,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"axca\",\n    \"company\":\"PT.BCA\",\n    \"department\":\"ITC\",\n    \"nik\":\"9809809\",\n    \"join_date\":\"2022-02-02\",\n    \"date_of_birth\":\"2021-02-02\"\n}",
+					"raw": "{\n    \"name\":\"Rudi\",\n    \"department\":\"ITC\",\n    \"date_of_birth\":\"2021-02-02\",\n    \"gender\":\"Laki-Laki\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -147,29 +147,6 @@
 						"api",
 						"employe",
 						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://127.0.0.1:8000/api/count-all",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/count-all",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"count-all"
 					]
 				}
 			},

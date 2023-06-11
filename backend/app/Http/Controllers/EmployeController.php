@@ -20,15 +20,6 @@ class EmployeController extends Controller
         return response()->json(['status' => '200', 'message'=>'Success', 'data' => $employes]);
     }
 
-    public function countEmploye(Request $request)
-    {
-        $employesAll = Employe::count();
-        $employesActive = Employe::where('status','active' )->count();
-        $employesInactive = Employe::where('status', 'inactive')->count();
-        $data = ['all' => $employesAll, 'active' => $employesActive, 'inactive' => $employesInactive ];
-        return response()->json(['status' => '200', 'message'=>'Success', 'data' => $data]);
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -49,23 +40,15 @@ class EmployeController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|string|max:150',
-            'company' => 'required|string|max:150',
             'department' => 'required|string|max:150',
-            'nik' => 'required|string|max:150',
-            'join_date' => 'required|string|max:150',
             'date_of_birth' => 'required|string|max:150',
-            'status' => 'required|string|max:10'
+            'gender' => 'required|string|max:10'
         ]);
         Employe::create([
             'name' => $request->name,
-            'company' => $request->company,
             'department'=> $request->department,
-            'nik' => $request->nik,
-            'join_date' => $request->join_date,
             'date_of_birth' => $request->date_of_birth,
-            'status' => $request->status,
-
-
+            'gender' => $request->gender
         ]);
         return response()->json(['status' => '200', 'message'=>'Success']);
     }
@@ -108,24 +91,18 @@ class EmployeController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|string|max:150',
-            'company' => 'required|string|max:150',
             'department' => 'required|string|max:150',
-            'nik' => 'required|string|max:150',
-            'join_date' => 'required|string|max:150',
             'date_of_birth' => 'required|string|max:150',
-            'status' => 'required|string|max:10'
+            'gender' => 'required|string|max:10'
         ]);
 
 
         $employes = Employe::find($id);
         $employes->update([
             'name' => $request->name,
-            'company' => $request->company,
             'department'=> $request->department,
-            'nik' => $request->nik,
-            'join_date' => $request->join_date,
             'date_of_birth' => $request->date_of_birth,
-            'status' => $request->status
+            'gender' => $request->gender
         ]);
         return response()->json(['status' => '200', 'message'=>'Success', 'data' => $employes]);
     }

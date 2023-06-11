@@ -15,6 +15,5 @@ use App\Http\Controllers\EmployeController;
 |
 */
 Route::resource('/employe', EmployeController::class);
-Route::get('/count-all', 'App\Http\Controllers\EmployeController@countEmploye');
 
 
